@@ -7,6 +7,20 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Transformers Demo</title>
+    <script>
+      (() => {
+        const storedTheme = window.localStorage.getItem("theme-mode");
+        const theme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

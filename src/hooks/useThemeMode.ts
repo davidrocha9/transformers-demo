@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import type { ThemeMode } from "../playground-config";
 
 const resolveInitialTheme = (): ThemeMode => {
+  const documentTheme = document.documentElement.dataset.theme;
+  if (documentTheme === "light" || documentTheme === "dark") {
+    return documentTheme;
+  }
+
   const storedTheme = window.localStorage.getItem("theme-mode");
   if (storedTheme === "light" || storedTheme === "dark") {
     return storedTheme;
