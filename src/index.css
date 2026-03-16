@@ -1,0 +1,92 @@
+:root {
+  font-family: Inter, "Segoe UI", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-muted: #fafafa;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --muted-foreground-strong: #475569;
+  --label-foreground: #475569;
+  --border: #e2e8f0;
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+  --focus-border: #94a3b8;
+  --focus-ring: rgba(148, 163, 184, 0.15);
+  --placeholder: #94a3b8;
+  --spinner-track: #cbd5e1;
+  --spinner-head: #0f172a;
+  --progress-fill: #0f172a;
+  --shadow-soft: rgba(15, 23, 42, 0.06);
+  --shadow-strong: rgba(15, 23, 42, 0.04);
+  --error-bg: #fff7f7;
+  --error-border: #fecdca;
+  --page-glow: rgba(255, 255, 255, 0.9);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] {
+  color: #f5f7fb;
+  background: #05070b;
+  --foreground: #f5f7fb;
+  --surface: #0a0d12;
+  --surface-muted: #11151c;
+  --muted: #05070b;
+  --muted-foreground: #8b95a7;
+  --muted-foreground-strong: #c8d0dd;
+  --label-foreground: #dbe2ec;
+  --border: #232936;
+  --primary: #f5f7fb;
+  --primary-foreground: #05070b;
+  --focus-border: #dbe2ec;
+  --focus-ring: rgba(219, 226, 236, 0.14);
+  --placeholder: #7b8596;
+  --spinner-track: #3a4250;
+  --spinner-head: #f5f7fb;
+  --progress-fill: #f5f7fb;
+  --shadow-soft: rgba(0, 0, 0, 0.34);
+  --shadow-strong: rgba(0, 0, 0, 0.28);
+  --error-bg: #241214;
+  --error-border: #6e1f28;
+  --page-glow: rgba(0, 0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, var(--page-glow), transparent 40%),
+    var(--muted);
+  color: var(--foreground);
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+code {
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  background: var(--muted);
+  font-size: 0.92em;
+}
+
+#root {
+  min-height: 100vh;
+}
